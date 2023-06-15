@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Gauss-Seidel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Gauss-Seidel</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="matrixInput">Matriz de Coeficientes</label>
+                <textarea class="form-control" id="matrixInput" rows="3" placeholder="Insira a matriz aqui">2 -1 1 8
+-3 2 -1 -11
+-2 1 2 -3</textarea>
+                <small id="matrixHelp" class="form-text text-muted">Digite a matriz de coeficientes separando as colunas por espaços e as linhas por quebras de linha. Exemplo: 2 -1 1 8\n-3 2 -1 -11\n-2 1 2 -3</small>
+            </div>
+            <div class="form-group">
+                <label for="initialGuessInput">Chute Inicial</label>
+                <input type="text" class="form-control" id="initialGuessInput" placeholder="Insira o chute inicial" value="0 0 0">
+                <small id="initialGuessHelp" class="form-text text-muted">Digite o chute inicial separando os valores por espaços. Exemplo: 0 0 0</small>
+            </div>
+            <div class="form-group">
+                <label for="epsilonInput">Epsilon</label>
+                <input type="text" class="form-control" id="epsilonInput" placeholder="Insira o valor do epsilon" value="0.00001">
+                <small id="epsilonHelp" class="form-text text-muted">Digite o valor do epsilon.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+        <br>
+        <div id="resultContainer">
+            <h3>Resultado:</h3>
+            <p>Valor Final: <span id="finalValue"></span></p>
+            <p>Convergência: <span id="convergenceStatus"></span></p>
+            <p>Iterações: <span id="iterationCount"></span></p>
+        </div>
+      <a href="index.html" class="voltar">Voltar</a>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    
+</body>
+</html>
